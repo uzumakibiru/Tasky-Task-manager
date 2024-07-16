@@ -1,0 +1,42 @@
+{%extends "base.html"%}{%block title%}Home{%endblock%}{%block content%}
+<div class="container my-5">
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="col">
+      <div class="card">
+        <div class="image-container">
+          <img
+            src="static/assets/task (1).png"
+            alt="Your Image"
+            class="img-fluid img"
+          />
+          <div class="image-overlay">
+            <a href="{{url_for('task')}}" class="overlay-text">Create</a>
+          </div>
+        </div>
+
+        <div class="card-body ct">
+          <p class="card-title">New Task</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <div class="image-container">
+          <img
+            src="static/assets/task (2).png"
+            alt="Your Image"
+            class="img-fluid img"
+          />
+          <div class="image-overlay">
+            <a href="{{url_for('project')}}" class="overlay-text">Create</a>
+          </div>
+        </div>
+        <div class="card-body ct">
+          <p class="card-title">Group Task</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock%}

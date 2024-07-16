@@ -1,0 +1,51 @@
+{% from "bootstrap5/form.html" import render_form %} {%extends
+"base.html"%}{%block title%}Task{%endblock%}{%block content%} {%if
+current_user.is_authenticated:%}
+<main class="my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <!--Rendering the registration form here-->
+        {{render_form(form, novalidate=True, button_map={"submit": "primary"})
+        }}
+      </div>
+      <div class="col-md-6 my-4">
+        <div class="container border border-1 rounded-4 to-do">
+          {%if not tasks:%}
+          <h3>No Tasks</h3>
+          {%else%}
+          <h3>To-Do List</h3>
+          {%if tasks:%} {%for task in tasks:%}
+
+          <form action="{{ url_for('delete_task') }}" method="post">
+            <ul class="my-4">
+              <li class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="checkbox"
+                  name="tasks_ids"
+                  value="{{task.id}}"
+                />
+                <label class="form-check-label" for="firstCheckbox"
+                  >{{task.todo}}</label
+                >
+              </li>
+            </ul>
+            {%endfor%} {%endif%}
+
+            <button type="submit" class="btn delete">
+              Delete Selected Tasks
+            </button>
+            {%endif%}
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{%else%}
+<div class="container px-4 py-5 my-5 text-center">
+  <p class="login_req">Please login</p>
+  <a href="{{url_for('login')}}">Login</a>
+</div>
+{%endif%} {%endblock%}

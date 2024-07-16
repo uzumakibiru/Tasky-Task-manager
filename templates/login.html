@@ -1,0 +1,21 @@
+{% from "bootstrap5/form.html" import render_form %} {%extends
+"base.html"%}{%block title%}Login{%endblock%}{%block content%}
+
+<main class="my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for
+        message in messages %}
+
+        <p class="flash">{{ message }}</p>
+
+        {% endfor %} {% endif %} {% endwith %}
+        <!--Rendering the registration form here-->
+        {{render_form(form, novalidate=True, button_map={"submit": "primary"})
+        }}
+      </div>
+    </div>
+  </div>
+</main>
+{%endblock%}

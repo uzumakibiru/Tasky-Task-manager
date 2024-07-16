@@ -1,0 +1,160 @@
+.nav-text {
+  font-family: "Ga Maamli", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  font-style: normal;
+}
+.nav-hov:hover {
+  color: #f8b703;
+  transform: scale(1.2);
+}
+.nav-hov {
+  color: rgb(34, 180, 238);
+  transition: transform 0.3s ease;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #f8dec6;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1;
+}
+.custom-btn {
+  font-family: "Ga Maamli", sans-serif;
+  color: #f3e5bf;
+  background-color: #f88603;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.custom-btn:hover {
+  color: #f8b703;
+  background-color: #f3e5bf;
+}
+.custom-btn-sign {
+  font-family: "Ga Maamli", sans-serif;
+  color: #1e0a92;
+  background-color: #34f006;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.custom-btn-sign:hover {
+  color: #34f006;
+  background-color: #f3e5bf;
+}
+.flash {
+  color: red;
+}
+.img {
+  width: 250px;
+  height: 250px;
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.image-container img {
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover .image-overlay {
+  opacity: 1; /* Fade in on hover */
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "Ga Maamli", sans-serif;
+  font-size: 5em;
+  transform: translate(-50%, -50%);
+  color: #98f890;
+  text-align: center;
+}
+.ct {
+  text-align: center;
+  background-color: #f0e87a;
+  color: #1e1b31;
+  font-size: 2em;
+  font-family: "Ga Maamli", sans-serif;
+}
+.to-do {
+  background-color: #bbebb2;
+  min-height: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.delete {
+  font-family: sans-serif;
+  color: #fd430a;
+  background-color: #f6f8f5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.delete:hover {
+  color: #f4f5f4;
+  background-color: #fd430a;
+}
+.login_req {
+  font-family: "Ga Maamli", sans-serif;
+  color: #070605;
+  font-size: 5em;
+  text-align: center;
+}
+.add {
+  font-family: sans-serif;
+  color: #0afd33;
+  background-color: #f6f8f5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.add:hover {
+  color: #f4f5f4;
+  background-color: #0afd33;
+}
+.delete_p {
+  position: absolute;
+  top: 100px;
+  right: 10px;
+  font-family: sans-serif;
+  color: #fd430a;
+  background-color: #f6f8f5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.delete_p:hover {
+  color: #f4f5f4;
+  background-color: #fd430a;
+}
+.nav-link.active {
+  color: #34f006;
+}
+.assign {
+  font-family: Garamond, sans-serif;
+  color: #070605;
+  font-size: 2em;
+  text-decoration: underline;
+}
+.gravatar {
+  width: 50px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  object-fit: cover; /* Ensures the image covers the entire area */
+  border-radius: 50%; /* Makes the image circular */
+}
